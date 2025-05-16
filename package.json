@@ -1,0 +1,26 @@
+{
+  "name": "mern-estate",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "index.js",
+  "scripts": {
+    "dev":"nodemon api/index.js",
+    "start":"node api/index.js "
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mythili1711/mern-estate.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mythili1711/mern-estate/issues"
+  },
+  "homepage": "https://github.com/mythili1711/mern-estate#readme",
+  "description": "",
+  "dependencies": {
+    "express": "^5.1.0",
+    "nodemon": "^3.1.10"
+  }
+}
