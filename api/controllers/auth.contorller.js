@@ -24,13 +24,16 @@ export const signin = async (req, res, next)=>{
   const { email, password} = req.body;
   try {
     const validUser = await User.findOne({ email });
-    if (!validUser) return next(errorHandler(404, 'User not fount'));
+    if (!validUser) return next(errorHandler(404, 'User not found!'));
+
     const validpassword = bcryptjs.compareSync(password, validUser.password);
-    if (!validpassword) return next(errorHandler(401, 'Worng credentials'));
+    if (!validpassword) return next(errorHandler(401, 'Worng credentials!'));
     const token = jwt.sign({ id: validUser._id}, process.env.JWT_SECRET)
-    res.cookie('access_token', token, { httpOnly: true}) 
+    const { password: pass, ...rest } = validUser._doc;
+    res
+    .cookie('access_token', token, { httpOnly: true} ) 
    .status(200)
-   .json(validUser);
+   .json(rest); 
   } catch (error) {
     next(error);
   }
