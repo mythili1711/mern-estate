@@ -20,12 +20,14 @@
   "homepage": "https://github.com/mythili1711/mern-estate#readme",
   "description": "",
   "dependencies": {
+    "@reduxjs/toolkit": "^2.8.2",
     "bcryptjs": "^3.0.2",
     "dotenv": "^16.5.0",
     "express": "^5.1.0",
     "jsonwebtoken": "^9.0.2",
     "mongodb": "^6.16.0",
     "mongoose": "^8.14.3",
-    "nodemon": "^3.1.10"
+    "nodemon": "^3.1.10",
+    "react-redux": "^9.2.0"
   }
 }
